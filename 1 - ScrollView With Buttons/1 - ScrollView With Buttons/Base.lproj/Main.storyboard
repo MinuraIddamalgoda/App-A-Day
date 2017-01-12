@@ -22,26 +22,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JS-OV-kLF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JS-OV-kLF">
                                 <rect key="frame" x="57" y="20" width="260" height="647"/>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="u3d-to-436">
+                                <rect key="frame" x="271" y="476" width="104" height="191"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="5Pl-M8-1D5"/>
+                                    <constraint firstAttribute="height" constant="191" id="jqq-20-Ryk"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ITs-Wp-tjR" appends="YES" id="7Hn-Ha-oWK"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowLeft" translatesAutoresizingMaskIntoConstraints="NO" id="oGb-eM-0Rz">
+                                <rect key="frame" x="0.0" y="476" width="104" height="191"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="AqY-TS-2QH"/>
+                                    <constraint firstAttribute="width" constant="104" id="Nsw-6k-eCy"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pKu-7D-XNm" appends="YES" id="eNN-k0-61A"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="u3d-to-436" secondAttribute="trailing" id="4ku-YL-RCK"/>
                             <constraint firstItem="9JS-OV-kLF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="65w-nY-JE2"/>
                             <constraint firstAttribute="bottom" secondItem="9JS-OV-kLF" secondAttribute="bottom" id="ABV-66-Hvd"/>
+                            <constraint firstItem="oGb-eM-0Rz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NbJ-oa-9Xb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9JS-OV-kLF" secondAttribute="bottom" id="bEe-Bt-XjU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u3d-to-436" secondAttribute="bottom" id="bZb-lX-dxz"/>
+                            <constraint firstAttribute="trailing" secondItem="u3d-to-436" secondAttribute="trailing" id="cGZ-JR-brz"/>
                             <constraint firstItem="9JS-OV-kLF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="hq5-ih-3cw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oGb-eM-0Rz" secondAttribute="bottom" id="lg8-11-138"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u3d-to-436" secondAttribute="bottom" id="nej-w7-qHZ"/>
                             <constraint firstItem="9JS-OV-kLF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ny3-BC-lAM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="leftArrowImage" destination="oGb-eM-0Rz" id="iY5-IM-027"/>
+                        <outlet property="leftTapRecognizer" destination="pKu-7D-XNm" id="tFL-US-PUp"/>
+                        <outlet property="rightArrowImage" destination="u3d-to-436" id="PDe-8s-RFf"/>
+                        <outlet property="rightTapRecognizer" destination="ITs-Wp-tjR" id="Hvg-Wv-ibw"/>
                         <outlet property="scrollView" destination="9JS-OV-kLF" id="Jdj-dq-Toy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ITs-Wp-tjR" userLabel="Right Tap"/>
+                <tapGestureRecognizer id="pKu-7D-XNm" userLabel="Left Tap"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowLeft" width="18" height="18"/>
+        <image name="arrowRight" width="18" height="18"/>
+    </resources>
 </document>
