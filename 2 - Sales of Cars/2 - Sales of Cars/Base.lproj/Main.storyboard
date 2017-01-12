@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="____Sales_of_Cars" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carLogo" translatesAutoresizingMaskIntoConstraints="NO" id="rEe-Gh-WOG">
+                                <rect key="frame" x="16" y="30" width="343" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="af7-ox-cmp"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="11L-K9-asm" userLabel="Car Info Entry StackView">
+                                <rect key="frame" x="16" y="327" width="343" height="330"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIt-VQ-2fd" userLabel="Top Divider">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="yaM-Dc-jId"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="nRf-IP-Mkg" userLabel="Name StackView">
+                                        <rect key="frame" x="0.0" y="10" width="343" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-69-IQ5">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of the vehicle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MqJ-jz-7YT">
+                                                <rect key="frame" x="0.0" y="31" width="210" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="MqJ-jz-7YT" secondAttribute="bottom" id="fdz-sj-c63"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Lwg-8X-u3q" userLabel="Year StackView">
+                                        <rect key="frame" x="0.0" y="79" width="343" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1z-el-m85">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the year of manufacture" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gH0-OI-wTk">
+                                                <rect key="frame" x="0.0" y="31" width="214" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="gH0-OI-wTk" secondAttribute="bottom" id="lC6-YT-bJU"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="a8g-Pw-FtP" userLabel="Price StackView">
+                                        <rect key="frame" x="0.0" y="148" width="343" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsc-aW-Bfz">
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the price of the vehicle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hKD-SF-b5U">
+                                                <rect key="frame" x="0.0" y="31" width="207" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="hKD-SF-b5U" secondAttribute="bottom" id="jb6-5A-irS"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="xII-VR-GS4" userLabel="Image StackView">
+                                        <rect key="frame" x="0.0" y="217" width="343" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image of Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmc-XR-alh">
+                                                <rect key="frame" x="0.0" y="0.0" width="149" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PP2-vT-r9s">
+                                                <rect key="frame" x="0.0" y="31" width="343" height="30"/>
+                                                <state key="normal" title="Select From Gallery"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="PP2-vT-r9s" firstAttribute="leading" secondItem="xII-VR-GS4" secondAttribute="leading" id="0h3-LB-5Y7"/>
+                                            <constraint firstAttribute="bottom" secondItem="PP2-vT-r9s" secondAttribute="bottom" id="pi7-Jp-4f2"/>
+                                            <constraint firstAttribute="trailing" secondItem="PP2-vT-r9s" secondAttribute="trailing" id="sai-kE-rgI"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lty-C6-e4h" userLabel="Bottom Divider">
+                                        <rect key="frame" x="0.0" y="286" width="343" height="2"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="bfl-eM-vOu"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rBj-uc-PQI" userLabel="Add Vehicle StackView">
+                                        <rect key="frame" x="0.0" y="296" width="343" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnP-Fo-hEw">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.79959392549999997" green="0.86390316489999996" blue="0.29157504439999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Register Car For Sale">
+                                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vnP-Fo-hEw" firstAttribute="leading" secondItem="rBj-uc-PQI" secondAttribute="leading" id="LKu-x9-qRV"/>
+                                            <constraint firstAttribute="bottom" secondItem="vnP-Fo-hEw" secondAttribute="bottom" id="Mq4-Xu-GhV"/>
+                                            <constraint firstItem="vnP-Fo-hEw" firstAttribute="top" secondItem="rBj-uc-PQI" secondAttribute="top" id="Sbk-DQ-uGr"/>
+                                            <constraint firstAttribute="trailing" secondItem="vnP-Fo-hEw" secondAttribute="trailing" id="nBG-2K-k8F"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nRf-IP-Mkg" firstAttribute="leading" secondItem="11L-K9-asm" secondAttribute="leading" constant="8" id="4G5-EE-QCM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lwg-8X-u3q" secondAttribute="trailing" constant="-8" id="CER-lp-Xxx"/>
+                                    <constraint firstItem="Lty-C6-e4h" firstAttribute="width" secondItem="HIt-VQ-2fd" secondAttribute="width" id="GkY-e8-8Ot"/>
+                                    <constraint firstItem="rBj-uc-PQI" firstAttribute="leading" secondItem="11L-K9-asm" secondAttribute="leading" constant="8" id="JEX-MV-ggl"/>
+                                    <constraint firstItem="Lwg-8X-u3q" firstAttribute="leading" secondItem="11L-K9-asm" secondAttribute="leading" constant="8" id="MHg-Hs-0jz"/>
+                                    <constraint firstItem="a8g-Pw-FtP" firstAttribute="leading" secondItem="11L-K9-asm" secondAttribute="leading" constant="8" id="UYh-eT-Ffx"/>
+                                    <constraint firstAttribute="trailing" secondItem="xII-VR-GS4" secondAttribute="trailing" constant="-8" id="liu-CT-NBT"/>
+                                    <constraint firstAttribute="trailing" secondItem="rBj-uc-PQI" secondAttribute="trailing" constant="-8" id="oFt-dz-jCM"/>
+                                    <constraint firstAttribute="trailing" secondItem="a8g-Pw-FtP" secondAttribute="trailing" constant="-8" id="uvi-qu-Jln"/>
+                                    <constraint firstAttribute="trailing" secondItem="nRf-IP-Mkg" secondAttribute="trailing" constant="-8" id="xSe-jh-G00"/>
+                                    <constraint firstItem="xII-VR-GS4" firstAttribute="leading" secondItem="11L-K9-asm" secondAttribute="leading" constant="8" id="xlR-wB-H7j"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rEe-Gh-WOG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Eh6-SI-UQL"/>
+                            <constraint firstItem="rEe-Gh-WOG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="MDp-Fx-UR1"/>
+                            <constraint firstItem="11L-K9-asm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TWO-AM-380"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="11L-K9-asm" secondAttribute="trailing" id="aG5-7m-bI3"/>
+                            <constraint firstItem="rEe-Gh-WOG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ctb-xQ-jOu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="11L-K9-asm" secondAttribute="bottom" constant="10" id="rE5-mQ-DXh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="60"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="carLogo" width="433" height="433"/>
+    </resources>
+</document>
