@@ -47,15 +47,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of the vehicle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MqJ-jz-7YT">
-                                                <rect key="frame" x="0.0" y="31" width="210" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of the vehicle" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MqJ-jz-7YT">
+                                                <rect key="frame" x="0.0" y="31" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="MqJ-jz-7YT" secondAttribute="bottom" id="1ns-it-oy5"/>
+                                            <constraint firstAttribute="trailing" secondItem="MqJ-jz-7YT" secondAttribute="trailing" id="dE5-Ty-Uqw"/>
                                             <constraint firstAttribute="bottom" secondItem="MqJ-jz-7YT" secondAttribute="bottom" id="fdz-sj-c63"/>
+                                            <constraint firstItem="MqJ-jz-7YT" firstAttribute="leading" secondItem="nRf-IP-Mkg" secondAttribute="leading" id="nAu-r8-iyV"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Lwg-8X-u3q" userLabel="Year StackView">
@@ -110,6 +113,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PP2-vT-r9s">
                                                 <rect key="frame" x="0.0" y="31" width="343" height="30"/>
                                                 <state key="normal" title="Select From Gallery"/>
+                                                <connections>
+                                                    <action selector="selectPhotoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zKJ-Bq-VlM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -135,6 +141,9 @@
                                                 <state key="normal" title="Register Car For Sale">
                                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="registerCar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dts-4G-uVo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -170,6 +179,11 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="11L-K9-asm" secondAttribute="bottom" constant="10" id="rE5-mQ-DXh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="MqJ-jz-7YT" id="xRG-Ip-YfO"/>
+                        <outlet property="priceTextField" destination="hKD-SF-b5U" id="OPu-F1-TUF"/>
+                        <outlet property="yearTextField" destination="gH0-OI-wTk" id="lAx-db-g5F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

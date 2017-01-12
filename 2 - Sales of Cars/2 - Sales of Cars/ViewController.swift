@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController:
     UIViewController,
@@ -16,27 +17,34 @@ class ViewController:
     // all I know is that the code breaks if I don't have it. Welcome to
     // iOS Dev.
     
-    // MARK: - Outlets
+    // MARK: - Variables
+    var chosenImage: UIImage!
     
-    
-    // MARK: Variables
+    // MARK: - Programatically created views
     let picker = UIImagePickerController()
+    
+    // MARK: - Outlets
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var yearTextField: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
+    
+    // MARK: - Actions
+    @IBAction func selectPhotoPressed(_ sender: UIButton) {
+        photoFromLibrary(sender: sender)
+    }
+    
+    @IBAction func registerCar(_ sender: UIButton) {
+        createCarObject(name: nameTextField.text!, year: Int(yearTextField.text!)!, price: Float(priceTextField.text!)!)
+    }
     
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         picker.delegate = self
-    }
-    
-    // MARK: - Delegates
-    // MARK: UIImagePickerController methods
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+
     }
     
     @IBAction func photoFromLibrary(sender: UIButton) {
@@ -44,6 +52,34 @@ class ViewController:
         picker.sourceType = .photoLibrary
         present(picker, animated: true, completion: nil)
         
+    }
+    
+    func createCarObject(name: String, year: Int, price: Float) {
+        let newCar = Car()
+        newCar.name = name
+        newCar.year = year
+        newCar.price = price
+        
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.add(newCar)
+        }
+        
+        
+    }
+    
+    // MARK: - Delegates
+    // MARK: UIImagePickerController methods
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        print("image chosen")
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
