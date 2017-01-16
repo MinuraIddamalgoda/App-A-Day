@@ -24,6 +24,10 @@ This app was much more about learning StackViews than anything. I intended to pr
 
 Also, almost forgot: _insert message about poor time management here_ 
 
-# Day Five -- [15th Jan. 2017]
+# Day Five -- Jason The Recycler (Android) [15th Jan. 2017]
+Continuing on from Day 3's RecyclerView binge, I present to you an app that downloads a JSON string and displays it in a RecyclerView: Jason The Recycler! 
 
+###### Yes, I really am that clever
+
+The app itself, as well as the code, is pretty basic and straight forward with good encapsulation and internal documentation. I found a site online that hosts sample JSON objects, so a big thank you to https://jsonplaceholder.typicode.com/! This was my first go at creating an app with networking functionality so it was a great learning experience. I opted for Volley as opposed to an AsyncTask due to ease of use amongst other reasons. 
 # Day Six -- [16th Jan. 2017]
