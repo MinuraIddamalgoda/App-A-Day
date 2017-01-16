@@ -2,12 +2,28 @@
 Basically, my plan is to understand a new concept of mobile app development every day or refine my current
 skills. I was inspired by https://jenniferdewalt.com/ who made a website a day for 180 days, I will attempt to make some sort of mobile app a day for 180 days
 
-# Day One -- ScrollViews (iOS)
+# Day One -- ScrollViews (iOS) [11th Jan. 2017]
 So this was a relatively rough app, for sure need to manage my time better with these projects. The app consists of three hardcoded images that the user can horizontally scroll through. I've also added two smaller images on the bottom left and bottom right of the screen and attached TapGestureRecognizers to them so they programmatically scroll the images. 
 
 In all, it wasn't too bad. The code could be cleaner and more modular, but there's plenty of internal documentation should a newbie happen across this project. 
 
-# Day Two -- Sales of Cars (iOS)
+# Day Two -- Sales of Cars (iOS) [12th Jan. 2017]
 This time around the app was much more refined. I added a proper logo, dividers, buttons, etc. -- the whole nine yards. The app was still black and white though. As far as I'm concerned, having nice colours and animations is last in terms of priority. The controller and view layers of the app were pretty straight forward. The view layer was similar to what I had done in my [MiraclePill project](https://github.com/MinuraIddamalgoda/MiraclePill) but this time passed valued to the controller layer. The model layer was handled by Realm -- which is what this project is based on. Using Realm was pretty seamless, and only took me about 5 minutes to have it integrated into the project. 
 
-This time around though time managment was better but not ideal. The code itself is cleaner and relatively modular with good documentation (humblebrag) but there's always room for improvement. For sure need to brush up on my skills with backend Swift work, it took way too long to create that Car class and properly instantiate in a way that works with Realm. 
+The Sales of Cars project's time managment was better but not ideal. The code itself is cleaner and relatively modular with good documentation (humblebrag) but there's always room for improvement. For sure need to brush up on my skills with backend Swift work, it took way too long to create that Car class and properly instantiate in a way that works with Realm. 
+
+NB: If you want to download this project, be sure to implement Realm's framework files locally, I will not be uploading them to my own GitHub hence they won't be in the project files you download. 
+
+# Day Three -- Contacts (Android) [13th Jan. 2017]
+Well, that didn't go as planned. My original idea was to create a contacts app that featured its own custom RecyclerView layout, with a mutable backend, fragment layouts, and a separate "add contact" section. My idea didn't account for the fact that the RecyclerView and Fragment portion of the app would take me _much_ longer than a day to work out. In the end, all I could accomplish in a day was a RecyclerView with a custom list layout + the contacts which are stored as a singleton. Learning how to implement my own RecyclerView was more difficult than I imagined, partially because I've spent so much time following tutorials. I didn't anticipate what I could actually accomplish in a day I already had prior commitments in. 
+
+On a more positive note, I learned to implement my own thumbnails into app and how to properly store, access, and present those image assets so it's not all a loss. Plus I am now much more comfortable implementing my own RecyclerView. 10/10 would make same mistake again. 
+
+# Day Four -- Calculator (iOS) [14th Jan. 2017] 
+This app was much more about learning StackViews than anything. I intended to properly learn how to use a StackView in Day 2's Sales of Cars app but time forced me to ditch that idea in favour of constraints. As a result, the app isn't as polished on all device resolutions. However, this time around, I've implemented an entire hierarchy of StackViews in order to get the buttons to not only line up as I want, but to also maintain their dimensions and spacing. 
+
+Also, almost forgot: _insert message about poor time management here_ 
+
+# Day Five -- [15th Jan. 2017]
+
+# Day Six -- [16th Jan. 2017]
