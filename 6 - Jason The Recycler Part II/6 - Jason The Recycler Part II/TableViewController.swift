@@ -10,16 +10,26 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    // MARK: - Instance vars
-    var userId = [String]()
-    var id = [String]()
-    var postTitle = [String]()
-    var postBody = [String]()
+    // MARK: - Structs
+//    struct Post {
+//        let userId: String
+//        let id: String
+//        let title: String
+//        let body: String
+//    }
     
-    var TableData:Array<String> = Array <String>()
+    // MARK: - Variables
+    //var postArray = [Post]()
+    var postArray = [Post]()
+    let cellReuseIdentifier = "cell"
+    
+    // MARK: - Outlets
+    @IBOutlet var postsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        postsTableView.delegate = self
+        postsTableView.dataSource = self
         
         getContactList(from: "http://jsonplaceholder.typicode.com/posts")
         
@@ -32,18 +42,42 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TableData.count
+        return postArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UITableViewCell
-        cell.textLabel
-        
+        let cell: PostTableViewCell = self.postsTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! PostTableViewCell
+        var userId = self.postArray[indexPath.row]
         return cell
     }
-
+ 
     // MARK: JSON methods
-    func getContactList(from url: String){
+    func getContactList(from urlString: String){
+
+        let url = URL(string: urlString)
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            let json = JSON(data: data!)
+            let postsArray = json.arrayValue
+            
+            DispatchQueue.main.async {
+                for posts in postsArray {
+                    
+                    let userId = posts["userId"].stringValue
+                    let id = posts["id"].stringValue
+                    let title = posts["title"].stringValue
+                    let body = posts["body"].stringValue
+                    
+                    let post = Post.init(userId: userId, id: id, title: title, body: body)
+                    self.postArray.append(post)
+                    
+                }
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        task.resume()
         
     }
     

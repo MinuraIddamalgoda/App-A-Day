@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA796AC1E35F90900493261 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA796AB1E35F90900493261 /* SwiftyJSON.swift */; };
+		0AA796AE1E36209100493261 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA796AD1E36209100493261 /* PostTableViewCell.swift */; };
+		0AA796B01E36257000493261 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA796AF1E36257000493261 /* Post.swift */; };
 		0AE1D47F1E2CE7D500EF824A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1D47E1E2CE7D500EF824A /* AppDelegate.swift */; };
 		0AE1D4841E2CE7D500EF824A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE1D4821E2CE7D500EF824A /* Main.storyboard */; };
 		0AE1D4861E2CE7D500EF824A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE1D4851E2CE7D500EF824A /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AA796AB1E35F90900493261 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		0AA796AD1E36209100493261 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		0AA796AF1E36257000493261 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0AE1D47B1E2CE7D500EF824A /* 6 - Jason The Recycler Part II.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "6 - Jason The Recycler Part II.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE1D47E1E2CE7D500EF824A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AE1D4831E2CE7D500EF824A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +63,9 @@
 				0AE1D47E1E2CE7D500EF824A /* AppDelegate.swift */,
 				0AE1D4821E2CE7D500EF824A /* Main.storyboard */,
 				0AE1D4901E2DB41E00EF824A /* TableViewController.swift */,
+				0AA796AF1E36257000493261 /* Post.swift */,
+				0AA796AD1E36209100493261 /* PostTableViewCell.swift */,
+				0AA796AB1E35F90900493261 /* SwiftyJSON.swift */,
 				0AE1D4851E2CE7D500EF824A /* Assets.xcassets */,
 				0AE1D4871E2CE7D500EF824A /* LaunchScreen.storyboard */,
 				0AE1D48A1E2CE7D500EF824A /* Info.plist */,
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA796AC1E35F90900493261 /* SwiftyJSON.swift in Sources */,
 				0AE1D47F1E2CE7D500EF824A /* AppDelegate.swift in Sources */,
 				0AE1D4911E2DB41E00EF824A /* TableViewController.swift in Sources */,
+				0AA796AE1E36209100493261 /* PostTableViewCell.swift in Sources */,
+				0AA796B01E36257000493261 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +314,7 @@
 				0AE1D48F1E2CE7D500EF824A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
