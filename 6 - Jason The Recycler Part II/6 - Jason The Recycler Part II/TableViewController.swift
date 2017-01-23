@@ -47,7 +47,10 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PostTableViewCell = self.postsTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! PostTableViewCell
-        var userId = self.postArray[indexPath.row]
+        cell.userId_idLabel.text = "\(self.postArray[indexPath.row].userId) -- \(self.postArray[indexPath.row].id)"
+        cell.titleLabel.text = self.postArray[indexPath.row].title
+        cell.bodyTextView.text = self.postArray[indexPath.row].body
+        
         return cell
     }
  

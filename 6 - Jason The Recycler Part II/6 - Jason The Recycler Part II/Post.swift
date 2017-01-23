@@ -8,18 +8,18 @@
 
 import Foundation
 
-class Post {
+class Post: NSObject {
     
-    static var userId: String = ""
-    static var id: String  = ""
-    static var title: String  = ""
-    static var body: String  = ""
+    var userId: String = ""
+    var id: String  = ""
+    var title: String  = ""
+    var body: String  = ""
     
     
     init(userId: String, id: String, title: String, body: String) {
-        _ = userId
-        _ = id
-        _ = title
-        _ = body
+        self.userId = userId
+        self.id = id
+        self.title = title
+        self.body = body
     }
 }
