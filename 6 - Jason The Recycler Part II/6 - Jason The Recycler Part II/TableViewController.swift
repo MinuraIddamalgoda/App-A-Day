@@ -10,16 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    // MARK: - Structs
-//    struct Post {
-//        let userId: String
-//        let id: String
-//        let title: String
-//        let body: String
-//    }
-    
     // MARK: - Variables
-    //var postArray = [Post]()
     var postArray = [Post]()
     let cellReuseIdentifier = "cell"
     
@@ -35,7 +26,7 @@ class TableViewController: UITableViewController {
         
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table view methods
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -53,7 +44,8 @@ class TableViewController: UITableViewController {
         
         return cell
     }
- 
+    
+    
     // MARK: JSON methods
     func getContactList(from urlString: String){
 
