@@ -30,4 +30,22 @@ Continuing on from Day 3's RecyclerView binge, I present to you an app that down
 ###### Yes, I really am that clever
 
 The app itself, as well as the code, is pretty basic and straight forward with good encapsulation and internal documentation. I found a site online that hosts sample JSON objects, so a big thank you to https://jsonplaceholder.typicode.com/! This was my first go at creating an app with networking functionality so it was a great learning experience. I opted for Volley as opposed to an AsyncTask due to ease of use amongst other reasons. 
-# Day Six -- [16th Jan. 2017]
+# Day Six -- Jason The Recycler Part II (iOS) [16th Jan. 2017]
+
+# Day Seven -- Non-Suburban Dictionary (Android) [17th Jan. 2017]
+
+# Day Eight -- [18th Jan. 2017]
+
+# Day Nine -- [19th Jan. 2017]
+
+# Day Ten -- [20th Jan. 2017]
+
+# Day Eleven -- [21st Jan. 2017]
+
+# Day Twelve -- [22nd Jan. 2017]
+
+# Day Thirteen -- [23rd Jan. 2017]
+
+# Day Fourteen -- [24th Jan. 2017]
+
+# Day Fifteen -- [25th Jan. 2017]
