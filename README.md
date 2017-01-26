@@ -30,9 +30,12 @@ Continuing on from Day 3's RecyclerView binge, I present to you an app that down
 ###### Yes, I really am that clever
 
 The app itself, as well as the code, is pretty basic and straight forward with good encapsulation and internal documentation. I found a site online that hosts sample JSON objects, so a big thank you to https://jsonplaceholder.typicode.com/! This was my first go at creating an app with networking functionality so it was a great learning experience. I opted for Volley as opposed to an AsyncTask due to ease of use amongst other reasons. 
+
 # Day Six -- Jason The Recycler Part II (iOS) [16th Jan. 2017]
+This app is more or less a copy of the previous day's app, hence "Round II". I did it mostly to draw parallels between Android and iOS development. The funcitonality is basic much like the first one, however the difference it mainly in the networking. For Android, I use Volley because it's _easier_, however, with iOS, I used SwiftyJSON _becuase I had to_. I found networking in iOS to be much more difficult and simply had to use SwiftyJSON or else I doubt I would have completed the project.
 
 # Day Seven -- Non-Suburban Dictionary (Android) [17th Jan. 2017]
+This was a slightly different take on networking and displaying data. Having found the wonders of AsyncTask (which I somehow did Day Five without), I feel much more confident in Android development. This time around, I implemented a single cardview to display the data which was slightly different to the RecyclerView I'm used to. I think my CardView implementation could've been done better and am keen to try again.
 
 # Day Eight -- [18th Jan. 2017]
 
