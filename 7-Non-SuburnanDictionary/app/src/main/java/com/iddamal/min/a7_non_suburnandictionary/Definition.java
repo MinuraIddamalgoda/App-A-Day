@@ -54,7 +54,9 @@ public class Definition {
     }
 
     // Constructor
-    public Definition(String definition, int thumbsUp, int thumbsDown, String link) {
+
+    public Definition(String searchTerm, String definition, int thumbsUp, int thumbsDown, String link) {
+        this.searchTerm = searchTerm;
         this.definition = definition;
         this.thumbsUp = thumbsUp;
         this.thumbsDown = thumbsDown;

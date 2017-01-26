@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,16 +19,17 @@ public class MainActivity extends AppCompatActivity {
     public static List<Definition> mDefinitions;
 
     // Variables -- controller
-    GetDefinitionAsyncTask getDefinition;
+    public static int currentIndex = 0;
+    public static String searchTerm;
 
     // Variables -- view
     private EditText mSearchEditText;
     private Button mSearchButton;
     private CardView mCardView;
-    private TextView mSearchTermTextView;
-    private TextView mDefinitionTextView;
-    private TextView mThumbsUpTextView;
-    private TextView mThumbsDownTextView;
+    private static TextView mSearchTermTextView;
+    private static TextView mDefinitionTextView;
+    private static TextView mThumbsUpTextView;
+    private static TextView mThumbsDownTextView;
     private Button mNextButton;
 
     @Override
@@ -37,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Setting up variables
         mDefinitions = new ArrayList<>();
-        getDefinition = new GetDefinitionAsyncTask(getApplicationContext());
 
         // Defining view variables
         mSearchEditText = (EditText) findViewById(R.id.search_edit_text);
@@ -56,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
         mSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getDefinition.execute(mSearchEditText.getText().toString());
+                searchTerm = mSearchEditText.getText().toString();
+                new GetDefinitionAsyncTask(getApplicationContext()).execute(searchTerm);
             }
         });
 
@@ -67,21 +69,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mSearchEditText.setOnKeyListener(new View.OnKeyListener() {
+        mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (keyCode == KeyEvent.KEYCODE_ENTER) {
-                    getDefinition.execute(mSearchEditText.getText().toString());
+            public void onClick(View v) {
+                try {
+                    currentIndex++;
+                    updateCardView(mDefinitions.get(currentIndex));
+
+                } catch (IndexOutOfBoundsException e) {
+                    e.printStackTrace();
+
+                    Toast.makeText(getApplicationContext(),
+                            "That's all, folks!", Toast.LENGTH_SHORT).show();
                 }
-                return false;
             }
         });
     }
 
-    private void updateCardView(Definition definition) {
+    public static void updateCardView(Definition definition) {
         mSearchTermTextView.setText(definition.getSearchTerm());
         mDefinitionTextView.setText(definition.getDefinition());
-        mThumbsUpTextView.setText(definition.getThumbsUp());
-        mThumbsDownTextView.setText(definition.getThumbsDown());
+        mThumbsUpTextView.setText(String.valueOf(definition.getThumbsUp()));
+        mThumbsDownTextView.setText(String.valueOf(definition.getThumbsDown()));
+    }
+
+    private void generateTestData() {
+        Definition definition;
+
+        definition = new Definition("test search1", "test def 1", 1, 1, "google.com");
+        mDefinitions.add(definition);
+
+        definition = new Definition("test search1", "test def 2", 2, 2, "facebook.com");
+        mDefinitions.add(definition);
+
+        definition = new Definition("test search1", "test def 3", 3, 3, "twitter.com");
+        mDefinitions.add(definition);
     }
 }
