@@ -14,6 +14,7 @@
 		0AF08A2A1E39E28D00756CA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF08A281E39E28D00756CA4 /* LaunchScreen.storyboard */; };
 		0AF08A351E39E28D00756CA4 /* ____MovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF08A341E39E28D00756CA4 /* ____MovieDBTests.swift */; };
 		0AF08A401E39E61400756CA4 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF08A3F1E39E61400756CA4 /* MoviesViewController.swift */; };
+		0AF08A421E39E98200756CA4 /* API_KEYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF08A411E39E98200756CA4 /* API_KEYS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		0AF08A341E39E28D00756CA4 /* ____MovieDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____MovieDBTests.swift"; sourceTree = "<group>"; };
 		0AF08A361E39E28D00756CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AF08A3F1E39E61400756CA4 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		0AF08A411E39E98200756CA4 /* API_KEYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API_KEYS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				0AF08A261E39E28D00756CA4 /* Assets.xcassets */,
 				0AF08A281E39E28D00756CA4 /* LaunchScreen.storyboard */,
 				0AF08A2B1E39E28D00756CA4 /* Info.plist */,
+				0AF08A411E39E98200756CA4 /* API_KEYS.swift */,
 			);
 			path = "8 - MovieDB";
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			files = (
 				0AF08A221E39E28D00756CA4 /* ViewController.swift in Sources */,
 				0AF08A201E39E28D00756CA4 /* AppDelegate.swift in Sources */,
+				0AF08A421E39E98200756CA4 /* API_KEYS.swift in Sources */,
 				0AF08A401E39E61400756CA4 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

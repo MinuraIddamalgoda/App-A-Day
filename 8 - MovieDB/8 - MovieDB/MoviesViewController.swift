@@ -13,6 +13,7 @@ class MoviesViewController: UICollectionViewController {
     // MARK: - Class-specific variables
     fileprivate let reuseIdentifier = "MovieCell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    private var api: API_KEYS!
 
 
     // MARK: - Methods
@@ -26,6 +27,7 @@ class MoviesViewController: UICollectionViewController {
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
