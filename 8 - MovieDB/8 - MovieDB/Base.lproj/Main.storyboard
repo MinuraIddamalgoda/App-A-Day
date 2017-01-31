@@ -13,7 +13,7 @@
         <scene sceneID="Qzs-et-3Ri">
             <objects>
                 <collectionViewController id="2lU-Ul-eSt" customClass="MoviesViewController" customModule="____MovieDB" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="xHv-2K-FGo">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xHv-2K-FGo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,7 +47,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="2lU-Ul-eSt" id="g0d-dN-3jC"/>
+                                <outlet property="delegate" destination="2lU-Ul-eSt" id="FsJ-ax-SdJ"/>
                             </connections>
                         </textField>
                     </navigationItem>
