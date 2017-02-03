@@ -8,44 +8,109 @@
 
 import UIKit
 
+
 class MoviesViewController: UICollectionViewController {
     
     // MARK: - Instance variables
+    // MARK: Model and Controller
+    let apiKeys = API_KEYS()
+    var resultArr = [SearchResult]()
+    var apiCallCompleted: Bool = false
+    
+    // MARK: View
     fileprivate let reuseIdentifier = "MovieCell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
-    let api = API_KEYS()
+    
     
     // MARK: - Outlets
-
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchButton: UIBarButtonItem!
+    
+    // MARK: - Actions
+    @IBAction func searchButtonPressed(_ sender: UIBarButtonItem) {
+        performApiCall(apiKey: apiKeys.getApiKey())
+    }
 
     // MARK: - Methods
+    // MARK: Model and Controller
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Do any additional setup after loading the view.
-        print(api.getApiKey())
+        // Setting up TextField targets
+        searchTextField.addTarget(self, action: #selector(MoviesViewController.textFieldDidChange(textfield:)), for: .editingChanged)
         
     }
 
-    func performApiCall() {
+    func performApiCall(apiKey: String) {
+    
+        apiCallCompleted = false
         
+        let url = URL.init(string: "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(getSearchTerm())")
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if (error == nil) {
+                let json = JSON.init(data: data!)
+                let jsonArr = json["results"].arrayValue
+                
+                DispatchQueue.main.async {
+                    
+                    for result in jsonArr {
+                        let title = result["original_title"].stringValue
+                        let poster = self.getPoster(posterPath: result["poster_path"].stringValue)
+                        let overview = result["overview"].stringValue
+                        let voteCount = result["vote_count"].intValue
+                        let voteAvg = result["vote_average"].floatValue
+                        
+                        let newSearchResult = SearchResult.init(title, poster, overview, voteCount, voteAvg)
+                        
+                        self.resultArr.append(newSearchResult)
+                    }
+                }
+            } else {
+                print(error!)
+            }
+        }
+        task.resume()
+        
+        self.apiCallCompleted = true
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    
+    // Downloads the 
+    func getPoster(posterPath: String) -> UIImage {
+        
+        let errorImage = UIImage(named: "32bit-48")
+        
+        let url = URL.init(string: "https://image.tmdb.org/t/p/w500\(posterPath)")
+        let data = try? Data.init(contentsOf: url!)
+        
+        if data == nil {
+            return errorImage!
+        } else {
+            let poster = UIImage(data: data!)
+            return poster!
+        }
     }
-    */
+    
+    // Gets the text of searchTextField and replaces spaces 
+    // with + in order to properly encode the URL for 
+    // API call
+    func getSearchTerm() -> String {
+        var searchTerm = searchTextField.text
+        searchTerm = searchTerm?.replacingOccurrences(of: " ", with: "+")
+        return searchTerm!
+    }
+    
+    // MARK: View
+    func textFieldDidChange(textfield: UITextField) {
+        if textfield.text != "" {
+            searchButton.isEnabled = true
+        } else {
+            searchButton.isEnabled = false
+        }
+    }
+    
 
     // MARK: UICollectionViewDataSource
 
@@ -57,7 +122,7 @@ class MoviesViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return resultArr.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "8 - MovieDB/MoviesViewController.swift"
+            timestampString = "507703699.39269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "MoviesViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____MovieDB.MoviesViewController.searchTextField.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "8 - MovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minIddamal/Documents/TapThatApp/8%20-%20MovieDB/8%20-%20MovieDB/MoviesViewController.swift"
+                  timestampString = "507699927.526336"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____MovieDB.MoviesViewController.searchTextField.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "8 - MovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minIddamal/Documents/TapThatApp/8%20-%20MovieDB/8%20-%20MovieDB/MoviesViewController.swift"
+                  timestampString = "507699927.549944"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____MovieDB.MoviesViewController.init (collectionViewLayout : __ObjC.UICollectionViewLayout) -&gt; ____MovieDB.MoviesViewController"
+                  moduleName = "8 - MovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minIddamal/Documents/TapThatApp/8%20-%20MovieDB/8%20-%20MovieDB/MoviesViewController.swift"
+                  timestampString = "507699927.55149"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "195">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____MovieDB.MoviesViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; ____MovieDB.MoviesViewController"
+                  moduleName = "8 - MovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minIddamal/Documents/TapThatApp/8%20-%20MovieDB/8%20-%20MovieDB/MoviesViewController.swift"
+                  timestampString = "507699927.553048"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____MovieDB.MoviesViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;____MovieDB.MoviesViewController&gt;"
+                  moduleName = "8 - MovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minIddamal/Documents/TapThatApp/8%20-%20MovieDB/8%20-%20MovieDB/MoviesViewController.swift"
+                  timestampString = "507699927.554402"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "198">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "8 - MovieDB/MoviesViewController.swift"
+            timestampString = "507730342.838403"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "MoviesViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

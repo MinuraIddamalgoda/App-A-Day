@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import UIKit
+
+class SearchResult: NSObject {
+    
+    var title: String = ""
+    var poster: UIImage?
+    var overview: String = ""
+    var voteCount: Int = -1
+    var voteAverage: Float = -1
+    
+    init(_ title: String,_ poster: UIImage,_ overview: String,_ voteCount: Int,_ voteAverage: Float) {
+        self.title = title
+        self.poster = poster
+        self.overview = overview
+        self.voteCount = voteCount
+        self.voteAverage = voteAverage
+    }
+    
+}

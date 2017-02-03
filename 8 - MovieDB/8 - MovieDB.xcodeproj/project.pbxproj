@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A02568C1E428B25007DF97E /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A02568B1E428B25007DF97E /* SearchResult.swift */; };
+		0A9469791E41CAD70047E60D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9469781E41CAD70047E60D /* SwiftyJSON.swift */; };
 		0AF08A201E39E28D00756CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF08A1F1E39E28D00756CA4 /* AppDelegate.swift */; };
 		0AF08A221E39E28D00756CA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF08A211E39E28D00756CA4 /* ViewController.swift */; };
 		0AF08A251E39E28D00756CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF08A231E39E28D00756CA4 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A02568B1E428B25007DF97E /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		0A9469781E41CAD70047E60D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		0AF08A1C1E39E28D00756CA4 /* 8 - MovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "8 - MovieDB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF08A1F1E39E28D00756CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AF08A211E39E28D00756CA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,10 +89,12 @@
 				0AF08A211E39E28D00756CA4 /* ViewController.swift */,
 				0AF08A231E39E28D00756CA4 /* Main.storyboard */,
 				0AF08A3F1E39E61400756CA4 /* MoviesViewController.swift */,
+				0AF08A411E39E98200756CA4 /* API_KEYS.swift */,
+				0A02568B1E428B25007DF97E /* SearchResult.swift */,
 				0AF08A261E39E28D00756CA4 /* Assets.xcassets */,
+				0A9469781E41CAD70047E60D /* SwiftyJSON.swift */,
 				0AF08A281E39E28D00756CA4 /* LaunchScreen.storyboard */,
 				0AF08A2B1E39E28D00756CA4 /* Info.plist */,
-				0AF08A411E39E98200756CA4 /* API_KEYS.swift */,
 			);
 			path = "8 - MovieDB";
 			sourceTree = "<group>";
@@ -210,6 +216,8 @@
 				0AF08A221E39E28D00756CA4 /* ViewController.swift in Sources */,
 				0AF08A201E39E28D00756CA4 /* AppDelegate.swift in Sources */,
 				0AF08A421E39E98200756CA4 /* API_KEYS.swift in Sources */,
+				0A9469791E41CAD70047E60D /* SwiftyJSON.swift in Sources */,
+				0A02568C1E428B25007DF97E /* SearchResult.swift in Sources */,
 				0AF08A401E39E61400756CA4 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +428,7 @@
 				0AF08A3B1E39E28D00756CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AF08A3C1E39E28D00756CA4 /* Build configuration list for PBXNativeTarget "8 - MovieDBTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +437,7 @@
 				0AF08A3E1E39E28D00756CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
