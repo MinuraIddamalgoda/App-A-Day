@@ -25,6 +25,8 @@ class MoviesViewController: UICollectionViewController {
     // MARK: - Outlets
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIBarButtonItem!
+    @IBOutlet var movieCollectionView: UICollectionView!
+    
     
     // MARK: - Actions
     @IBAction func searchButtonPressed(_ sender: UIBarButtonItem) {
@@ -37,11 +39,13 @@ class MoviesViewController: UICollectionViewController {
         super.viewDidLoad()
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Setting up TextField targets
         searchTextField.addTarget(self, action: #selector(MoviesViewController.textFieldDidChange(textfield:)), for: .editingChanged)
         
+        // Setting up UICollectionView
+        setUpCollectionView()
     }
 
     func performApiCall(apiKey: String) {
@@ -75,9 +79,11 @@ class MoviesViewController: UICollectionViewController {
         task.resume()
         
         self.apiCallCompleted = true
+        self.movieCollectionView.reloadData()
     }
     
-    // Downloads the 
+    // Downloads the poster image for a movie based on the link returned in the
+    // API call
     func getPoster(posterPath: String) -> UIImage {
         
         let errorImage = UIImage(named: "32bit-48")
@@ -111,25 +117,34 @@ class MoviesViewController: UICollectionViewController {
         }
     }
     
+    func setUpCollectionView() {
+        
+    }
+    
 
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return resultArr.count
+        return self.resultArr.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
+        let cell: MovieCollectionViewCell = self.movieCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MovieCollectionViewCell
+        
         // Configure the cell
-    
+        cell.collectionImageView.image = resultArr[indexPath.row].poster
+        cell.collectionLabel.text = resultArr[indexPath.row].title
+        
+        
         return cell
     }
 
