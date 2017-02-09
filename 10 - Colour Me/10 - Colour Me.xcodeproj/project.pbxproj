@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2EA60F1E4C2657007652B5 /* TintImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2EA60E1E4C2657007652B5 /* TintImage.swift */; };
 		0A95472B1E3F26D50060BB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95472A1E3F26D50060BB47 /* AppDelegate.swift */; };
 		0A95472D1E3F26D50060BB47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95472C1E3F26D50060BB47 /* ViewController.swift */; };
 		0A9547301E3F26D50060BB47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A95472E1E3F26D50060BB47 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A2EA60E1E4C2657007652B5 /* TintImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintImage.swift; sourceTree = "<group>"; };
 		0A9547271E3F26D50060BB47 /* 10 - Colour Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "10 - Colour Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A95472A1E3F26D50060BB47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A95472C1E3F26D50060BB47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2EA60A1E4C243E007652B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0A2EA60B1E4C2449007652B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A2EA60E1E4C2657007652B5 /* TintImage.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0A2EA60D1E4C245D007652B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A95472C1E3F26D50060BB47 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		0A95471E1E3F26D50060BB47 = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +79,13 @@
 		0A9547291E3F26D50060BB47 /* 10 - Colour Me */ = {
 			isa = PBXGroup;
 			children = (
-				0A95472A1E3F26D50060BB47 /* AppDelegate.swift */,
-				0A95472C1E3F26D50060BB47 /* ViewController.swift */,
 				0A95472E1E3F26D50060BB47 /* Main.storyboard */,
-				0A9547311E3F26D50060BB47 /* Assets.xcassets */,
+				0A2EA60D1E4C245D007652B5 /* Controller */,
+				0A2EA60B1E4C2449007652B5 /* View */,
+				0A2EA60A1E4C243E007652B5 /* Model */,
+				0A95472A1E3F26D50060BB47 /* AppDelegate.swift */,
 				0A9547331E3F26D50060BB47 /* LaunchScreen.storyboard */,
+				0A9547311E3F26D50060BB47 /* Assets.xcassets */,
 				0A9547361E3F26D50060BB47 /* Info.plist */,
 			);
 			path = "10 - Colour Me";
@@ -139,6 +166,7 @@
 			files = (
 				0A95472D1E3F26D50060BB47 /* ViewController.swift in Sources */,
 				0A95472B1E3F26D50060BB47 /* AppDelegate.swift in Sources */,
+				0A2EA60F1E4C2657007652B5 /* TintImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +330,7 @@
 				0A95473B1E3F26D50060BB47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
