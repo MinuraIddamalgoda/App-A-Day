@@ -11,15 +11,59 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.iddamal.min.a9_anim8.MainActivity">
 
+
     <TextView
+        android:gravity="center"
+        android:textSize="20sp"
         android:id="@+id/textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="Hello World!"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
 
-    <Button
-        android:text="@string/fade"
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:layout_weight="1"
+            android:text="@string/fade_in"
+            android:id="@+id/btnFadeIn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="34dp"/>
+
+        <Button
+            android:layout_weight="1"
+            android:text="@string/slide_up"
+            android:id="@+id/btnUp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="34dp"/>
+
+        <Button
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:text="@string/slide_down"
+            android:id="@+id/btnDown"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="34dp"/>
+
+        <Button
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:text="@string/fade_out"
+            android:id="@+id/btnFadeOut"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="34dp"/>
+
+
+    </LinearLayout>
 </RelativeLayout>
