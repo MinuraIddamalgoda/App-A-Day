@@ -23,18 +23,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="VUC-Ea-1un">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="VUC-Ea-1un">
                                 <rect key="frame" x="24" y="28" width="327" height="327"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="VUC-Ea-1un" secondAttribute="height" multiplier="1:1" id="AOj-sX-tRK"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hTC-QH-zWM" appends="YES" id="s7E-28-BxV"/>
+                                </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysD-eW-jAn">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysD-eW-jAn">
                                 <rect key="frame" x="24" y="617" width="327" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="UDB-Qr-hLc"/>
                                 </constraints>
-                                <state key="normal" title="Select Tint Colour"/>
+                                <state key="normal" title="No Color or Image Selected"/>
+                                <connections>
+                                    <action selector="onSelectColorButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vmX-yH-BYI"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xx7-3K-EN9" userLabel="Colours Stack View">
                                 <rect key="frame" x="32" y="375" width="335" height="222"/>
@@ -313,12 +320,15 @@
                         <outlet property="blueTapRecog" destination="4M6-zX-dUg" id="Xfc-WR-Ygz"/>
                         <outlet property="greenStackView" destination="6dZ-SY-m1E" id="kg7-rC-HGZ"/>
                         <outlet property="greenTapRecog" destination="Ibh-RD-miO" id="bJh-vD-imm"/>
+                        <outlet property="imageView" destination="VUC-Ea-1un" id="DhO-TW-SXc"/>
+                        <outlet property="imageViewTapRecog" destination="hTC-QH-zWM" id="GSS-b9-JRq"/>
                         <outlet property="pinkStackView" destination="CBK-N2-zMD" id="o3j-1F-JAO"/>
                         <outlet property="pinkTapRecog" destination="zl1-LL-Ngs" id="mgJ-Zq-3pz"/>
                         <outlet property="purpleStackView" destination="7mo-3K-WAg" id="hGJ-yN-y7h"/>
                         <outlet property="purpleTapRecog" destination="9TZ-Uy-eUF" id="WxS-4x-1Tb"/>
                         <outlet property="redStackView" destination="N9h-X1-ooK" id="RDf-sv-pzS"/>
                         <outlet property="redTapRecog" destination="W8F-AN-zdq" id="Ndl-fJ-mcN"/>
+                        <outlet property="selectColorButton" destination="ysD-eW-jAn" id="wDz-qa-YTH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -328,6 +338,7 @@
                 <tapGestureRecognizer id="9cR-NZ-FGF" userLabel="Black Tap Recog"/>
                 <tapGestureRecognizer id="zl1-LL-Ngs" userLabel="Pink Tap Recog"/>
                 <tapGestureRecognizer id="4M6-zX-dUg" userLabel="Blue Tap Recog"/>
+                <tapGestureRecognizer id="hTC-QH-zWM" userLabel="ImageView Tap Recog"/>
             </objects>
             <point key="canvasLocation" x="-457" y="-159"/>
         </scene>

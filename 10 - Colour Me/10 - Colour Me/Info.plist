@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Allow Media Usage?</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow Photo Lib Usage?</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow Camera Usage?</string>
 </dict>
 </plist>

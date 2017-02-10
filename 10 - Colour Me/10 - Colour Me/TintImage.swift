@@ -12,8 +12,30 @@ import UIKit
 class TintImage: UIImage {
     
     
-    func tintImage(image: UIImage) -> UIImage {
+    static func getTintedImage(image: UIImage, color: String) -> UIImage {
         
+        switch color {
+        case "Green":
+            
+            break
+        case "Red":
+            
+            break
+        case "Purple":
+            
+            break
+        case "Black":
+            
+            break
+        case "Pink":
+            
+            break
+        case "Blue":
+            
+            break
+        default:
+            print("error")
+        }
         return image
     }
 }
