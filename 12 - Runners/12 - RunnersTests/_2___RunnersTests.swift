@@ -2,7 +2,7 @@
 //  _2___RunnersTests.swift
 //  12 - RunnersTests
 //
-//  Created by Minura Iddamalgoda on 11/2/17.
+//  Created by Minura Iddamalgoda on 12/2/17.
 //  Copyright © 2017 Minura Iddamalgoda. All rights reserved.
 //
 
