@@ -18,6 +18,8 @@
 		0A2EA7191E5124CA007652B5 /* SteakTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2EA7181E5124CA007652B5 /* SteakTableViewCell.swift */; };
 		0A2EA7201E5148E0007652B5 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2EA71F1E5148E0007652B5 /* CartViewController.swift */; };
 		0A2EA7221E5151AF007652B5 /* ChickenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2EA7211E5151AF007652B5 /* ChickenTableViewCell.swift */; };
+		0A2EA7241E518708007652B5 /* FormatAsCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2EA7231E518708007652B5 /* FormatAsCurrency.swift */; };
+		0A2EA7261E51BB57007652B5 /* FormatRemainingStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2EA7251E51BB57007652B5 /* FormatRemainingStock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		0A2EA7181E5124CA007652B5 /* SteakTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SteakTableViewCell.swift; sourceTree = "<group>"; };
 		0A2EA71F1E5148E0007652B5 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		0A2EA7211E5151AF007652B5 /* ChickenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChickenTableViewCell.swift; sourceTree = "<group>"; };
+		0A2EA7231E518708007652B5 /* FormatAsCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatAsCurrency.swift; sourceTree = "<group>"; };
+		0A2EA7251E51BB57007652B5 /* FormatRemainingStock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatRemainingStock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				0A2EA7151E512375007652B5 /* Food.swift */,
+				0A2EA7231E518708007652B5 /* FormatAsCurrency.swift */,
+				0A2EA7251E51BB57007652B5 /* FormatRemainingStock.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -257,11 +263,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A2EA7221E5151AF007652B5 /* ChickenTableViewCell.swift in Sources */,
+				0A2EA7241E518708007652B5 /* FormatAsCurrency.swift in Sources */,
 				0A2EA6BE1E5090A4007652B5 /* AppDelegate.swift in Sources */,
 				0A2EA7191E5124CA007652B5 /* SteakTableViewCell.swift in Sources */,
 				0A2EA7201E5148E0007652B5 /* CartViewController.swift in Sources */,
 				0A2EA7161E512375007652B5 /* Food.swift in Sources */,
 				0A2EA6E71E512185007652B5 /* ChickenTableViewController.swift in Sources */,
+				0A2EA7261E51BB57007652B5 /* FormatRemainingStock.swift in Sources */,
 				0A2EA6E41E511902007652B5 /* SteakTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

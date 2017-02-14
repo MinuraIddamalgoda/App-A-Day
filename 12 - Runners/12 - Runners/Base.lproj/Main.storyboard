@@ -28,7 +28,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="gWY-d7-6dn" userLabel="Text Stack View">
-                                            <rect key="frame" x="163" y="12" width="204" height="139"/>
+                                            <rect key="frame" x="163" y="12" width="204" height="150.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw7-8m-2Dz">
                                                     <rect key="frame" x="97.5" y="0.0" width="106.5" height="31.5"/>
@@ -40,13 +40,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-4q-dtH">
-                                                    <rect key="frame" x="160.5" y="53.5" width="43.5" height="45.5"/>
+                                                    <rect key="frame" x="160.5" y="53.5" width="43.5" height="57"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <color key="textColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only n Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NW3-aP-8TD">
-                                                    <rect key="frame" x="84.5" y="121" width="119.5" height="18"/>
+                                                    <rect key="frame" x="84.5" y="132.5" width="119.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                             </subviews>
                                         </stackView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W6h-Oi-aiW">
-                                            <rect key="frame" x="4" y="4" width="155" height="155"/>
+                                            <rect key="frame" x="4" y="10" width="155" height="155"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="155" id="V7p-JY-jCk"/>
                                                 <constraint firstAttribute="width" secondItem="W6h-Oi-aiW" secondAttribute="height" multiplier="1:1" id="iVJ-xS-A7E"/>
@@ -63,14 +63,12 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="W6h-Oi-aiW" firstAttribute="top" secondItem="uZa-tV-blk" secondAttribute="top" constant="4" id="2rt-gY-vf6"/>
                                         <constraint firstItem="W6h-Oi-aiW" firstAttribute="leading" secondItem="uZa-tV-blk" secondAttribute="leading" constant="4" id="4Lf-lN-9x2"/>
                                         <constraint firstItem="gWY-d7-6dn" firstAttribute="leading" secondItem="W6h-Oi-aiW" secondAttribute="trailing" constant="4" id="bYD-qy-f80"/>
                                         <constraint firstItem="gWY-d7-6dn" firstAttribute="trailing" secondItem="uZa-tV-blk" secondAttribute="trailingMargin" id="gpw-C7-I4P"/>
                                         <constraint firstItem="gWY-d7-6dn" firstAttribute="top" secondItem="uZa-tV-blk" secondAttribute="topMargin" constant="4" id="i6L-PF-A7l"/>
                                         <constraint firstItem="W6h-Oi-aiW" firstAttribute="centerY" secondItem="uZa-tV-blk" secondAttribute="centerY" id="mS1-7F-ZaJ"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="gWY-d7-6dn" secondAttribute="bottom" constant="4" id="ulG-7r-uAl"/>
-                                        <constraint firstAttribute="bottom" secondItem="W6h-Oi-aiW" secondAttribute="bottom" constant="4" id="yPt-Mh-TZT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -220,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpK-v4-dzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3362.4000000000001" y="244.22788605697153"/>
+            <point key="canvasLocation" x="3145" y="244"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

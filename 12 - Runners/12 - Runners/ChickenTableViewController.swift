@@ -49,10 +49,10 @@ class ChickenTableViewController: UITableViewController {
         let cell: ChickenTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! ChickenTableViewCell
         
         cell.itemNameLabel.text = chickenList[indexPath.row].name
-        cell.priceLabel.text = String(chickenList[indexPath.row].price)
-        cell.stockRemainingLabel.text = String(chickenList[indexPath.row].stockRemaining)
+        cell.priceLabel.text = FormatAsCurrency.getFormart(chickenList[indexPath.row].price)
+        cell.stockRemainingLabel.text = FormatRemainingStock.getStockPhrase(stock: chickenList[indexPath.row].stockRemaining)
         cell.foodImageView.image = chickenList[indexPath.row].image
-
+        
         return cell
     }
 
