@@ -14,8 +14,31 @@
     tools:context="com.iddamal.min.a11_runners.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/frag_steak"
+            android:name="com.iddamal.min.a11_runners.SteakFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_steak">
+
+
+        </fragment>
+
+        <fragment
+            android:name="com.iddamal.min.a11_runners.ChickenFragment"
+            android:id="@+id/frag_chix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_chix">
+
+        </fragment>
+    </LinearLayout>
+
+
+
 </RelativeLayout>

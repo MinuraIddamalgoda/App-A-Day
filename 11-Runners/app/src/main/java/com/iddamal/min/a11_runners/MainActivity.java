@@ -40,6 +40,14 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.frag_steak, SteakFragment.newInstance())
+                    .commit();
+
+        }
     }
 
     @Override
@@ -80,18 +88,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        switch (id) {
+            case R.id.menu_steak:
+                // Load Steak frag
+            case R.id.menu_chix:
+                // Load Chix frag
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
