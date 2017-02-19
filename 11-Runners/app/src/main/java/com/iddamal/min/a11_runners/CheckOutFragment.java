@@ -7,16 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class SteakFragment extends Fragment {
+public class CheckOutFragment extends Fragment {
 
-    static SteakFragment newInstance() {
-        return new SteakFragment();
+    public static CheckOutFragment newInstance() {
+        return new CheckOutFragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frag_steak, container, false);
+        View view = inflater.inflate(R.layout.frag_check_out, container, false);
 
         return view;
     }
