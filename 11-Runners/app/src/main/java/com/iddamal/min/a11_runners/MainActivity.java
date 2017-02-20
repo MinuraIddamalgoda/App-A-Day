@@ -6,66 +6,97 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
 
-public class MainActivity extends FragmentActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.iddamal.min.a11_runners.MainActivity.sCheckOutFragment;
+import static com.iddamal.min.a11_runners.MainActivity.sChickenFragment;
+import static com.iddamal.min.a11_runners.MainActivity.sFragmentList;
+import static com.iddamal.min.a11_runners.MainActivity.sSteakFragment;
+import static com.iddamal.min.a11_runners.R.layout.activity_main;
+
+public class MainActivity extends AppCompatActivity {
 
     // Variables -- model
+    public static List<Fragment> sFragmentList;
+
+    // Variables -- controller
     private PagerAdapter mPagerAdapter;
 
     // Variables -- view
     private ViewPager mViewPager;
-
-    // Constants
-    private static final int NUM_PAGES = 3;
+    public static SteakFragment sSteakFragment;
+    public static ChickenFragment sChickenFragment;
+    public static CheckOutFragment sCheckOutFragment;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Setting up view and adapter
+        sFragmentList = new ArrayList<>();
+
+        // Setting up fragments
+        setUpFragments();
+
+        // Adding fragments to sFragmentList
+        sFragmentList.add(sSteakFragment);
+        sFragmentList.add(sChickenFragment);
+        sFragmentList.add(sCheckOutFragment);
+
+        // Setting up ViewPager and PagerAdapter
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
         mPagerAdapter = new FoodPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
+        mViewPager.setPageTransformer(false, new ZoomOutPagerTransformer());
 
+        // Setting up ActionToolbar
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+    }
+
+    private void setUpFragments() {
+        sSteakFragment = SteakFragment.newInstance();
+        sChickenFragment = ChickenFragment.newInstance();
+        sCheckOutFragment = CheckOutFragment.newInstance();
     }
 }
 
 class FoodPagerAdapter extends FragmentStatePagerAdapter {
 
-    // Variables -- view
-    private SteakFragment mSteakFragment;
-    private ChickenFragment mChickenFragment;
-    private CheckOutFragment mCheckOutFragment;
-
-
     FoodPagerAdapter(FragmentManager fm) {
         super(fm);
-
-        // Instantiating fragments
-        mSteakFragment = SteakFragment.newInstance();
-        mChickenFragment = ChickenFragment.newInstance();
-        mCheckOutFragment = CheckOutFragment.newInstance();
     }
 
     @Override
     public Fragment getItem(int position) {
-        switch (position) {
-            case 0:
-                return mSteakFragment;
-            case 1:
-                return mChickenFragment;
-            case 2:
-                return mCheckOutFragment;
-            default:
-                return SteakFragment.newInstance();
-        }
+        return sFragmentList.get(position);
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return sFragmentList.size();
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        switch (position) {
+            case 0:
+                return "Steak";
+            case 1:
+                return "Chicken";
+            case 2:
+                return "Check Out";
+            default:
+                return "null";
+        }
     }
 }

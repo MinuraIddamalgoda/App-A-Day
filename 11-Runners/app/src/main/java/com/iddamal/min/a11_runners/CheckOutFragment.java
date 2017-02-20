@@ -9,6 +9,12 @@ import android.view.ViewGroup;
 
 public class CheckOutFragment extends Fragment {
 
+    private final static String TAG = "Check Out";
+
+    public static String getTAG() {
+        return TAG;
+    }
+
     public static CheckOutFragment newInstance() {
         return new CheckOutFragment();
     }

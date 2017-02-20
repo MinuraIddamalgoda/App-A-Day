@@ -9,6 +9,12 @@ import android.view.ViewGroup;
 
 public class ChickenFragment extends Fragment {
 
+    private final static String TAG = "Chicken";
+
+    public static String getTAG() {
+        return TAG;
+    }
+
     static ChickenFragment newInstance() {
         return new ChickenFragment();
     }

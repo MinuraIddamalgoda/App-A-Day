@@ -9,6 +9,12 @@ import android.view.ViewGroup;
 
 public class SteakFragment extends Fragment {
 
+    private final static String TAG = "Steak";
+
+    public static String getTAG() {
+        return TAG;
+    }
+
     static SteakFragment newInstance() {
         return new SteakFragment();
     }
