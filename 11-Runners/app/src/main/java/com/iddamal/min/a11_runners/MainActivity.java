@@ -1,5 +1,7 @@
 package com.iddamal.min.a11_runners;
 
+import android.graphics.Color;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -7,9 +9,11 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 
 import java.util.ArrayList;
@@ -35,18 +39,29 @@ public class MainActivity extends AppCompatActivity {
     public static ChickenFragment sChickenFragment;
     public static CheckOutFragment sCheckOutFragment;
     private Toolbar toolbar;
+    private TabLayout mTabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Setting up Toolbar
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+
+        // Setting up TabLayout
+        mTabLayout = (TabLayout) findViewById(R.id.tabs);
+
         sFragmentList = new ArrayList<>();
 
         // Setting up fragments
-        setUpFragments();
+        sSteakFragment = SteakFragment.newInstance();
+        sChickenFragment = ChickenFragment.newInstance();
+        sCheckOutFragment = CheckOutFragment.newInstance();
 
-        // Adding fragments to sFragmentList
+        // Adding fragments to sFragmentList®
         sFragmentList.add(sSteakFragment);
         sFragmentList.add(sChickenFragment);
         sFragmentList.add(sCheckOutFragment);
@@ -56,17 +71,7 @@ public class MainActivity extends AppCompatActivity {
         mPagerAdapter = new FoodPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
         mViewPager.setPageTransformer(false, new ZoomOutPagerTransformer());
-
-        // Setting up ActionToolbar
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-    }
-
-    private void setUpFragments() {
-        sSteakFragment = SteakFragment.newInstance();
-        sChickenFragment = ChickenFragment.newInstance();
-        sCheckOutFragment = CheckOutFragment.newInstance();
+        mTabLayout.setupWithViewPager(mViewPager);
     }
 }
 
