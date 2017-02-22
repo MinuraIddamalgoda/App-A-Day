@@ -48,6 +48,8 @@ This was a slightly different take on networking and displaying data. Having fou
 # Day Twelve -- [22nd Jan. 2017]
 
 # Day Thirteen -- [23rd Jan. 2017]
+Credit for "Infinite Flame" logo goes to: 
+<a href="http://www.freepik.com/free-vector/infinite-logo_798107.htm">Designed by Freepik</a>
 
 # Day Fourteen -- [24th Jan. 2017]
 
