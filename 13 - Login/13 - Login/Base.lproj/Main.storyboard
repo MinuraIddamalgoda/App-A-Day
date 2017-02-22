@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_3___Login" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_background" translatesAutoresizingMaskIntoConstraints="NO" id="MHT-FN-GvS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wT-Vw-at4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="p5A-a5-v2E">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhg-yf-1qo" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" highlightedImage="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Zvf-kk-X3R">
+                                        <rect key="frame" x="38" y="129" width="300" height="155"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="155" id="Izu-35-djd"/>
+                                            <constraint firstAttribute="width" constant="300" id="V75-i8-LhV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Tnt-yV-97R" userLabel="Log In Sign Up Stack">
+                                        <rect key="frame" x="48" y="551" width="280" height="91"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHF-uw-06p">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="AJ3-eL-pgp"/>
+                                                    <constraint firstAttribute="height" constant="50" id="EB5-lb-vEN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                                <color key="tintColor" red="0.10701653360000001" green="0.1070136726" blue="0.1070156246" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Log In">
+                                                    <color key="titleColor" red="0.99621403220000004" green="0.99619531630000002" blue="0.99620807170000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8wd-Wf-SiK"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not A Member? Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yj7-S8-2Wu">
+                                                <rect key="frame" x="47.5" y="70" width="185" height="21"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="185" id="MaK-em-hLc"/>
+                                                    <constraint firstAttribute="height" constant="21" id="gfT-4e-kpL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.6954635978" green="0.69976878170000001" blue="0.69986557959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="obe-KI-hMD" appends="YES" id="EXh-w0-Lmx"/>
+                                                </connections>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Zvf-kk-X3R" firstAttribute="centerX" secondItem="hhg-yf-1qo" secondAttribute="centerX" id="2R6-kf-tYP"/>
+                                    <constraint firstItem="Tnt-yV-97R" firstAttribute="leading" secondItem="hhg-yf-1qo" secondAttribute="leading" constant="48" id="47C-6R-7Vw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tnt-yV-97R" secondAttribute="trailing" constant="47" id="J2o-Pq-jkQ"/>
+                                    <constraint firstItem="Zvf-kk-X3R" firstAttribute="top" secondItem="hhg-yf-1qo" secondAttribute="top" constant="128.5" id="QYY-HH-bqq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tnt-yV-97R" secondAttribute="bottom" constant="25" id="QrU-fG-7YR"/>
+                                    <constraint firstItem="Tnt-yV-97R" firstAttribute="centerX" secondItem="hhg-yf-1qo" secondAttribute="centerX" id="y9M-xq-B7A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hhg-yf-1qo" secondAttribute="bottom" id="4vl-AK-4m9"/>
+                            <constraint firstAttribute="trailing" secondItem="MHT-FN-GvS" secondAttribute="trailing" id="9uc-xe-16V"/>
+                            <constraint firstItem="6wT-Vw-at4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AIT-v3-5Nw"/>
+                            <constraint firstItem="MHT-FN-GvS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JVQ-qL-zSB"/>
+                            <constraint firstItem="hhg-yf-1qo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Q5u-8P-2VC"/>
+                            <constraint firstItem="hhg-yf-1qo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XDT-LW-EpG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MHT-FN-GvS" secondAttribute="bottom" id="dKi-eo-BOA"/>
+                            <constraint firstItem="6wT-Vw-at4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e9u-jA-hmX"/>
+                            <constraint firstAttribute="trailing" secondItem="6wT-Vw-at4" secondAttribute="trailing" id="kca-VW-CaA"/>
+                            <constraint firstItem="MHT-FN-GvS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mOr-W9-LTr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6wT-Vw-at4" secondAttribute="bottom" id="s2H-uc-gzg"/>
+                            <constraint firstAttribute="trailing" secondItem="hhg-yf-1qo" secondAttribute="trailing" id="uXW-zU-JQE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurVisualEffect" destination="6wT-Vw-at4" id="SRP-AM-yPU"/>
+                        <outlet property="loginButton" destination="LHF-uw-06p" id="ikC-9E-Ixc"/>
+                        <outlet property="logoImageView" destination="Zvf-kk-X3R" id="fR6-kS-S03"/>
+                        <outlet property="signUpLabel" destination="yj7-S8-2Wu" id="vvb-HI-Mta"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="obe-KI-hMD" userLabel="Sign Up Tap Gesture Recognizer"/>
+            </objects>
+            <point key="canvasLocation" x="-87.200000000000003" y="333.28335832083962"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login_background" width="2453" height="1637"/>
+        <image name="logo" width="1268" height="951"/>
+    </resources>
+</document>
